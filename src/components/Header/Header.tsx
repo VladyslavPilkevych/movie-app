@@ -1,6 +1,6 @@
 import React, { FC, memo } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import imgLogo from '../../assets/images/logo.jpg';
+import imgLogo from '../../assets/images/logo.png';
 import { IconButton } from '@mui/material';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 // import StarBorderRoundedIcon from '@mui/icons-material/StarBorderRounded';
@@ -14,10 +14,10 @@ const PageHeader = styled.header`
   width: 5%;
   position: fixed;
   z-index: 10;
-  background-color: ${(props) => props.theme.colors.black};
-`;
-
-const Image = styled.img`
+  background-color: ${(props) => props.theme.colors.background};
+  `;
+  
+  const Image = styled.img`
   max-width: 100%;
 `;
 

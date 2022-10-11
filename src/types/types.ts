@@ -2,7 +2,9 @@ export interface ITheme {
     colors: {
       white: string;
       black: string;
+      background: string;
       creamWhite: string;
+      lightBlue: string;
       hoverDarkBlue: string;
     },
     media: {
