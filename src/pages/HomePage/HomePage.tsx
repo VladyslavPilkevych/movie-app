@@ -1,5 +1,5 @@
 import React, { FC, memo } from 'react';
-import HeaderCarousel from '../../components/Carousel/Carousel';
+import HeaderCarousel from '../../components/HeaderCarousel/HeaderCarousel';
 import styled from 'styled-components';
 
 const CustomHomeContainer = styled.section`

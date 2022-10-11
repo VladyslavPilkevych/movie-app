@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import AppRoutes from './Routes/Routes';
 import Header from './components/Header/Header';
+import './App.css'
 
 function App() {
   return (
