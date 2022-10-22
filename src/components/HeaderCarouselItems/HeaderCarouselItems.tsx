@@ -1,4 +1,5 @@
 import React, { FC, memo } from 'react';
+import StarIcon from '@mui/icons-material/Star';
 import { IHeaderCarouselItems } from '../../types/types';
 import styled from 'styled-components';
 
@@ -42,14 +43,14 @@ const CustomMovieName = styled.h2`
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 56px;
-  margin-top: 30px;
+  margin-top: 15px;
   @media ${(props) => props.theme.media.tablet} {
     font-size: 36px;
-    margin-top: 20px;
+    margin-top: 12px;
   }
   @media ${(props) => props.theme.media.phone} {
     font-size: 20px;
-    margin-top: 12px;
+    margin-top: 10px;
   }
 `;
 const CustomMovieText = styled.h5`
@@ -69,6 +70,7 @@ const CustomMovieText = styled.h5`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-top: 5px;
   }
 `;
 
@@ -81,6 +83,13 @@ const HeaderCarouselItems: FC<HeaderCarouselItemsProps> = ({ value }) => {
     <CustomContainer style={{ backgroundImage: `url(${value.imageSrc})` }}>
       <CustomDarkBg>
         <CustomMovieGenre>{value.genre}</CustomMovieGenre>
+        <div style={{marginTop: '12px'}}>
+            <StarIcon sx={{color: 'white'}} />
+            <StarIcon sx={{color: 'white'}} />
+            <StarIcon sx={{color: 'white'}} />
+            <StarIcon sx={{color: 'white'}} />
+            <StarIcon sx={{color: 'white'}} />
+        </div>
         <CustomMovieName>{value.name}</CustomMovieName>
         <CustomMovieText>{value.text}</CustomMovieText>
       </CustomDarkBg>

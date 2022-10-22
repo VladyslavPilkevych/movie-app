@@ -1,5 +1,6 @@
 import React, { FC, memo } from 'react';
 import HeaderCarousel from '../../components/HeaderCarousel/HeaderCarousel';
+import MoviesContainer from '../../components/MoviesContainer/MoviesContainer';
 import styled from 'styled-components';
 
 const CustomHomeContainer = styled.section`
@@ -11,6 +12,7 @@ const HomePage: FC = () => {
   return (
     <CustomHomeContainer>
       <HeaderCarousel />
+      <MoviesContainer />
     </CustomHomeContainer>
   );
 };
