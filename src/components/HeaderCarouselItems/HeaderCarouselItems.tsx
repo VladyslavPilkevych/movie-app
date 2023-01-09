@@ -73,6 +73,39 @@ const CustomMovieText = styled.h5`
     margin-top: 5px;
   }
 `;
+const CustomBtnGradient = styled.div`
+  padding: 1px;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 40px;
+  background: linear-gradient(
+    135.87deg,
+    #0feffd 1.25%,
+    #ff00f5 51.73%,
+    rgba(15, 239, 253, 0.22) 77.22%
+  );
+`;
+const CustomWatchNowBtn = styled.button`
+  color: ${(props) => props.theme.colors.white};
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  padding: 15px 35px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 40px;
+  border: 3px solid transparent;
+  background: rgba(44, 44, 44, 0.6);
+  :hover {
+    background: rgba(44, 44, 44, 0);
+    text-decoration: underline;
+  }
+  @media ${(props) => props.theme.media.tablet} {
+    font-size: 18px;
+  }
+  @media ${(props) => props.theme.media.phone} {
+    font-size: 16px;
+  }
+`;
 
 interface HeaderCarouselItemsProps {
   value: IHeaderCarouselItems;
@@ -83,15 +116,18 @@ const HeaderCarouselItems: FC<HeaderCarouselItemsProps> = ({ value }) => {
     <CustomContainer style={{ backgroundImage: `url(${value.imageSrc})` }}>
       <CustomDarkBg>
         <CustomMovieGenre>{value.genre}</CustomMovieGenre>
-        <div style={{marginTop: '12px'}}>
-            <StarIcon sx={{color: 'white'}} />
-            <StarIcon sx={{color: 'white'}} />
-            <StarIcon sx={{color: 'white'}} />
-            <StarIcon sx={{color: 'white'}} />
-            <StarIcon sx={{color: 'white'}} />
+        <div style={{ marginTop: '12px' }}>
+          <StarIcon sx={{ color: 'white' }} />
+          <StarIcon sx={{ color: 'white' }} />
+          <StarIcon sx={{ color: 'white' }} />
+          <StarIcon sx={{ color: 'white' }} />
+          <StarIcon sx={{ color: 'white' }} />
         </div>
         <CustomMovieName>{value.name}</CustomMovieName>
         <CustomMovieText>{value.text}</CustomMovieText>
+        <CustomBtnGradient>
+          <CustomWatchNowBtn>Watch Now</CustomWatchNowBtn>
+        </CustomBtnGradient>
       </CustomDarkBg>
     </CustomContainer>
   );

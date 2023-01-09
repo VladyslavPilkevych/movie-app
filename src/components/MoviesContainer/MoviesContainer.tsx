@@ -15,6 +15,18 @@ import 'slick-carousel/slick/slick-theme.css';
 //   grid-template-columns: repeat(5, auto);
 // `;
 
+const CustomTitle = styled.h2`
+  margin: 25px;
+  color: ${(props) => props.theme.colors.white};
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  // @media ${(props) => props.theme.media.tablet} {
+  // }
+  // @media ${(props) => props.theme.media.phone} {
+  // }
+`;
+
 interface ArrowProps {
   className?: string;
   style?: object;
@@ -82,9 +94,20 @@ const MoviesContainer: FC = () => {
   };
   return (
     // <CustomContainer>
-    <div style={{ width: '100%', margin: '15px auto' }}>
-      <Slider {...settings}>
-        <div style={{ margin: '5px' }}>
+    <>
+      <CustomTitle>New releases ▷</CustomTitle>
+      <div style={{ width: '100%', margin: '15px auto' }}>
+        <Slider {...settings}>
+          <MovieItem value={obj} height={400} />
+          <MovieItem value={obj} height={400} />
+          <MovieItem value={obj} height={400} />
+          <MovieItem value={obj} height={400} />
+          <MovieItem value={obj} height={400} />
+          <MovieItem value={obj} height={400} />
+          <MovieItem value={obj} height={400} />
+          <MovieItem value={obj} height={400} />
+          <MovieItem value={obj} height={400} />
+          {/* <div style={{ margin: '5px' }}>
           <MovieItem value={obj} height={400} />
         </div>
         <div style={{ margin: '5px' }}>
@@ -98,9 +121,11 @@ const MoviesContainer: FC = () => {
         </div>
         <div style={{ margin: '5px' }}>
           <MovieItem value={obj} height={400} />
-        </div>
-      </Slider>
-    </div>
+        </div> */}
+        </Slider>
+      </div>
+      <CustomTitle>Featured TV shows ▷</CustomTitle>
+    </>
     // </CustomContainer>
   );
 };

@@ -7,6 +7,7 @@ const CustomContainer = styled.div`
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0 3px;
   // background-position: center;
   // @media ${(props) => props.theme.media.tablet} {
   //   height: 350px;
