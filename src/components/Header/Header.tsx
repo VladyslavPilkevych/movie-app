@@ -7,65 +7,8 @@ import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
-import styled from 'styled-components';
+import { CustomContainer, CustomNavLink, PageHeader, activeNavLinkStyle, navLinkStyle, Image } from './HeaderStyles';
 
-const PageHeader = styled.header`
-  height: 100%;
-  width: 5%;
-  position: fixed;
-  z-index: 10;
-  background-color: ${(props) => props.theme.colors.background};
-  `;
-  
-  const Image = styled.img`
-  max-width: 100%;
-`;
-
-const CustomContainer = styled.div`
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  // justify-content: center;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  margin-top: 30px;
-`;
-
-const CustomNavLink = styled(NavLink)`
-  // color: ${(props) => props.theme.colors.white};
-  // cursor: 'pointer',
-  @keyframes bounce {
-    0%,
-    20%,
-    60%,
-    100% {
-      transform: translateY(0);
-      transform: translateY(0);
-    }
-    35% {
-      transform: translateY(-4px);
-      transform: translateY(-4px);
-    }
-    80% {
-      transform: translateY(-3px);
-      transform: translateY(-3px);
-    }
-  }
-  :hover {
-    animation: bounce 1s;
-  }
-`;
-
-const navLinkStyle = {
-  cursor: 'pointer',
-};
-const activeNavLinkStyle = {
-  // fontStyle: 'italic',
-  // cursor: 'default',
-  // opacity: '0.4',
-};
 
 const Header: FC = () => {
   const location = useLocation();
