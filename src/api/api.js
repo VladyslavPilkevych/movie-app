@@ -28,6 +28,43 @@ class API {
     const data = await response.json();
     return data.results;
   }
+  async getTVSeriesList() {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/discover/tv?api_key=${this.apiKey}&sort_by=popularity.desc&page=1&language=en-US`,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.results;
+  }
+
+  async getTop10FilmsByPopularity() {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/discover/movie?api_key=${this.apiKey}&sort_by=popularity.desc&page=1&language=en-US`,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.results.slice(0, 10); // Return only the top 10 results
+  }
+
 }
 
 const api = new API(API_KEY);

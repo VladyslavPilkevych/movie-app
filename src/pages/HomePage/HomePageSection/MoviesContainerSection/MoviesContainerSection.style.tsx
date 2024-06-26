@@ -11,7 +11,7 @@ import styled from "styled-components";
 // `;
 
 export const CustomTitle = styled.h2`
-  margin: 25px;
+  margin: 50px 25px 20px;
   color: ${(props) => props.theme.colors.white};
   font-family: 'Roboto', sans-serif;
   font-weight: 500;

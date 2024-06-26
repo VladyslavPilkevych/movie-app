@@ -1,10 +1,16 @@
 import React, { FC, memo } from 'react';
+import { CustomAccountContainer, CustomDarkBg } from './AccountPage.style';
+import TitleComponent from '../../components/TitleComponent/TitleComponent';
 
 const AccountPage: FC = () => {
   return (
-    <div>
-      <p>Account Page</p>
-    </div>
+    <>
+      <CustomDarkBg />
+      <CustomAccountContainer>
+        <TitleComponent style={{fontSize: "36px"}}>{"Account settings"}</TitleComponent>
+        
+      </CustomAccountContainer>
+    </>
   );
 };
 

@@ -1,3 +1,6 @@
+import { LocalDate } from "js-joda";
+import { Language } from "../api";
+
 export interface ITheme {
   colors: {
     white: string;
@@ -6,6 +9,7 @@ export interface ITheme {
     creamWhite: string;
     lightBlue: string;
     hoverDarkBlue: string;
+    orange: string;
   };
   media: {
     phone: string;
@@ -14,9 +18,22 @@ export interface ITheme {
   };
 }
 
-export interface IHeaderCarouselItems {
+export interface IHeaderCarouselItem {
   genre: string;
   name: string;
   text: string;
   imageSrc: string;
+}
+
+export interface IBaseCardData {
+  id: number;
+  name: string;
+  originalLanguage?: Language;
+  overview?: string;
+  popularity?: number;
+  posterPath?: string;
+  voteAverage?: number;
+  voteCount?: number;
+  adult?: boolean;
+  releaseDate?: LocalDate;
 }

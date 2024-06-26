@@ -8,6 +8,7 @@ export const theme: ITheme = {
     creamWhite: '#EDF5E1',
     lightBlue: '#0FEFFD',
     hoverDarkBlue: '#01203f',
+    orange: '#FF7400',
   },
   media: {
     phone: '(max-width: 426px)',

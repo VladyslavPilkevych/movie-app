@@ -1,7 +1,8 @@
-import React, { memo } from 'react';
+import React from 'react';
 import AppRoutes from './Routes/Routes';
 import Header from './components/Header/Header';
 import './App.css'
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
       <div style={{ paddingLeft: '5%' }}>
         <AppRoutes />
       </div>
+      <Footer />
     </div>
   );
 }
 
-export default memo(App);
+export default React.memo(App);

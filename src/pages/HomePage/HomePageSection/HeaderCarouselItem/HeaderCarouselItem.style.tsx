@@ -99,10 +99,13 @@ export const CustomWatchNowBtn = styled.button`
   cursor: pointer;
   border-radius: 10px;
   border: 3px solid transparent;
+  transition: 0.5s;
   background: rgba(44, 44, 44, 0.3);
   :hover {
     background: rgba(44, 44, 44, 0);
     text-decoration: underline;
+    transform: scale(1.1);
+    font-weight: bold;
   }
   @media ${(props) => props.theme.media.tablet} {
     font-size: 18px;

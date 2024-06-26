@@ -1,7 +1,18 @@
-export enum D {
+export enum DistanceEnum {
+    AUTO = "auto",
     PX1 = "10px",
     PX2 = "20px",
     PX3 = "30px",
     PX4 = "40px",
     PX5 = "50px",
+    PC1 = "10%",
+    PC2 = "20%",
+    PC3 = "30%",
+    PC4 = "40%",
+    PC5 = "50%",
+    PC6 = "60%",
+    PC7 = "70%",
+    PC8 = "80%",
+    PC9 = "90%",
+    PC10 = "100%",
 }

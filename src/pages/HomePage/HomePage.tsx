@@ -1,10 +1,9 @@
-import React, { FC, memo } from 'react';
-import HeaderCarousel from '../../components/HeaderCarousel/HeaderCarousel';
-import MoviesContainer from '../../components/MoviesContainer/MoviesContainer';
-import styled from 'styled-components';
-import { CustomDarkBg, CustomHomeContainer } from './HomePageStyles';
+import React from 'react';
+import HeaderCarousel from './HomePageSection/HeaderCarouselSection/HeaderCarousel';
+import MoviesContainer from './HomePageSection/MoviesContainerSection/MoviesContainerSection';
+import { CustomDarkBg, CustomHomeContainer } from './HomePage.style';
 
-const HomePage: FC = () => {
+const HomePage: React.FC = () => {
   return (
     <>
       <CustomDarkBg />
@@ -16,4 +15,4 @@ const HomePage: FC = () => {
   );
 };
 
-export default memo(HomePage);
+export default React.memo(HomePage);

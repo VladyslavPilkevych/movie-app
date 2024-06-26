@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const CustomHomeContainer = styled.section`
-  height: 3000px;
+export const CustomFavoriteContainer = styled.section`
+padding: 20px 0;
+  padding-bottom: 40px;
   background-color: ${(props) => props.theme.colors.background};
 `;
 export const CustomDarkBg = styled.div`

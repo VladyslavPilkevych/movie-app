@@ -1,11 +1,11 @@
-import React, { FC, memo } from 'react';
+import React from 'react';
 import Carousel from 'react-material-ui-carousel';
-import HeaderCarouselItems from '../HeaderCarouselItems/HeaderCarouselItems';
-import imgGodzilla from '../../assets/images/carousel/01_godzilla.png';
-import imgWonderWoman from '../../assets/images/carousel/02_wonder-woman.png';
-import imgSuperheroes from '../../assets/images/carousel/03_superheroes.png';
+import HeaderCarouselItems from '../HeaderCarouselItem/HeaderCarouselItem';
+import imgGodzilla from '../../../../assets/images/carousel/01_godzilla.png';
+import imgWonderWoman from '../../../../assets/images/carousel/02_wonder-woman.png';
+import imgSuperheroes from '../../../../assets/images/carousel/03_superheroes.png';
 
-const HeaderCarousel: FC = () => {
+const HeaderCarousel: React.FC = () => {
   const carouselItems = [
     {
       genre: 'Science Fiction',
@@ -44,4 +44,4 @@ const HeaderCarousel: FC = () => {
   );
 };
 
-export default memo(HeaderCarousel);
+export default React.memo(HeaderCarousel);
