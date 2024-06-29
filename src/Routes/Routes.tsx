@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import HomePage from '../pages/HomePage/HomePage';
-import AccountPage from '../pages/AccountPage/AccountPage';
-import SettingsPage from '../pages/SettingsPage/SettingsPage';
-import FavoritePage from '../pages/FavoritePage/FavoritePage';
+import HomePage from '../pages/HomePage';
+import AccountPage from '../pages/AccountPage';
+import SettingsPage from '../pages/SettingsPage';
+import FavoritePage from '../pages/FavoritePage';
 
 function AppRoutes() {
   return (

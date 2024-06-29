@@ -1,10 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { clearFormValues, updateFormValue } from '../redux/actions';
-export interface FormState {
-  [key: string]: {
-    [key: string]: string;
-  };
-}
+import { FormState } from '../redux/types';
+
 const useForm = (stateKey: string) => {
   const dispatch = useDispatch();
   const formValues = useSelector((state: { form: FormState }) => state.form[stateKey] || {});

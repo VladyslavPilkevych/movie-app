@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderCarousel from './HomePageSection/HeaderCarouselSection/HeaderCarousel';
-import MoviesContainer from './HomePageSection/MoviesContainerSection/MoviesContainerSection';
+import HeaderCarousel from './HomePageSection/HeaderCarouselSection';
+import MoviesContainer from './HomePageSection/MoviesContainerSection';
 import { CustomDarkBg, CustomHomeContainer } from './HomePage.style';
 
 const HomePage: React.FC = () => {

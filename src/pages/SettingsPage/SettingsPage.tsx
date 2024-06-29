@@ -1,10 +1,11 @@
 import React, { FC, memo } from 'react';
+import TitleComponent from '../../components/TitleComponent';
 
 const SettingsPage: FC = () => {
   return (
-    <div>
-      <p>Settings Page</p>
-    </div>
+    <>
+      <TitleComponent style={{fontSize: "36px"}}>{"Interface settings"}</TitleComponent>
+    </>
   );
 };
 

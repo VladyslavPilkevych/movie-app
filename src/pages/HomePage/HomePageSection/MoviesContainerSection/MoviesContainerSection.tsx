@@ -10,7 +10,7 @@ import {
   convertMovieToCardItemProps,
   convertSerieToCardItemProps,
 } from '../../../../utils/funstions';
-import SliderComponent from '../../../../components/SliderComponent/SliderComponent';
+import SliderComponent from '../../../../components/SliderComponent';
 
 const MoviesContainerSection: React.FC = () => {
   const [moviesArray, setMoviesArray] = React.useState<IMovieApiData[]>([]);

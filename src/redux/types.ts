@@ -4,8 +4,13 @@ export interface FormState {
   };
 }
 
+export enum ActionTypesEnum {
+  UPDATE_FORM_VALUE = "UPDATE_FORM_VALUE",
+  CLEAR_FORM_VALUES = "CLEAR_FORM_VALUES",
+}
+
 interface UpdateFormValueAction {
-  type: 'UPDATE_FORM_VALUE';
+  type: ActionTypesEnum.UPDATE_FORM_VALUE;
   payload: {
     stateKey: string;
     formFieldName: string;
@@ -14,7 +19,7 @@ interface UpdateFormValueAction {
 }
 
 interface ClearFormValuesAction {
-  type: 'CLEAR_FORM_VALUES';
+  type: ActionTypesEnum.CLEAR_FORM_VALUES;
   payload: {
     stateKey: string;
   };

@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel';
-import HeaderCarouselItems from '../HeaderCarouselItem/HeaderCarouselItem';
+import HeaderCarouselItems from '../HeaderCarouselItem';
 import imgGodzilla from '../../../../assets/images/carousel/01_godzilla.png';
 import imgWonderWoman from '../../../../assets/images/carousel/02_wonder-woman.png';
 import imgSuperheroes from '../../../../assets/images/carousel/03_superheroes.png';
@@ -25,7 +25,7 @@ const HeaderCarousel: React.FC = () => {
       text: "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
       imageSrc: imgSuperheroes,
     },
-  ];
+  ]; // todo: remove
   return (
     <Carousel
       duration={1500}

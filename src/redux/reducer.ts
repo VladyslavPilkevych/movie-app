@@ -1,10 +1,10 @@
-import { FormState, FormActionTypes } from './types';
+import { FormState, FormActionTypes, ActionTypesEnum } from './types';
 
 const initialState: FormState = {};
 
 const formReducer = (state = initialState, action: FormActionTypes): FormState => {
   switch (action.type) {
-    case 'UPDATE_FORM_VALUE': {
+    case ActionTypesEnum.UPDATE_FORM_VALUE: {
       const { stateKey, formFieldName, value } = action.payload;
       return {
         ...state,
@@ -14,7 +14,7 @@ const formReducer = (state = initialState, action: FormActionTypes): FormState =
         },
       };
     }
-    case 'CLEAR_FORM_VALUES': {
+    case ActionTypesEnum.CLEAR_FORM_VALUES: {
       return {
         ...state,
         [action.payload.stateKey]: {},

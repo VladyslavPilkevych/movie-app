@@ -3,9 +3,9 @@ import { CustomDarkBg, CustomFavoriteContainer } from './FavoritePage.style';
 import { IBaseCardData } from '../../types/types';
 import { BASE_URL_IMG, IMovieApiData, api } from '../../api';
 import { convertMovieToCardItemProps } from '../../utils/funstions';
-import SliderComponent from '../../components/SliderComponent/SliderComponent';
+import SliderComponent from '../../components/SliderComponent';
 import { Settings } from 'react-slick';
-import TitleComponent from '../../components/TitleComponent/TitleComponent';
+import TitleComponent from '../../components/TitleComponent';
 
 const FavoritePage: React.FC = () => {
   const [favoriteArray, setFavoriteArray] = React.useState<IBaseCardData[]>([]);
