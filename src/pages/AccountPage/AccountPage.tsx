@@ -20,7 +20,7 @@ import {
 } from './AccountPage.style';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { ColorEnum } from '../../assets/styles';
-import Toast from '../../components/Toast/Toast';
+import Toast from '../../components/Toast';
 import { AlertColor } from '../../components/Toast/types';
 
 const AccountPage: React.FC = () => {

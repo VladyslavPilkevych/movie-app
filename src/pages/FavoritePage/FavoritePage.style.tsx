@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CustomFavoriteContainer = styled.section`
-padding: 20px 0;
+  padding: 20px 0;
   padding-bottom: 40px;
   background-color: ${(props) => props.theme.colors.background};
 `;

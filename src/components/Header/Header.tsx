@@ -5,7 +5,7 @@ import { Avatar, IconButton, Menu, MenuItem } from '@mui/material';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
-import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
+import MovieFilterIcon from '@mui/icons-material/MovieFilter';
 import {
   CustomContainer,
   CustomNavLink,
@@ -46,9 +46,14 @@ const Header: React.FC = () => {
             <PersonRoundedIcon />
           </IconButton>
         </CustomNavLink>
-        <CustomNavLink to="/settings">
+        {/* <CustomNavLink to="/settings">
           <IconButton aria-label="SettingsRoundedIcon">
             <SettingsRoundedIcon />
+          </IconButton>
+        </CustomNavLink> */}
+        <CustomNavLink to="/filter">
+          <IconButton aria-label="FilterRoundedIcon">
+            <MovieFilterIcon />
           </IconButton>
         </CustomNavLink>
       </CustomContainer>

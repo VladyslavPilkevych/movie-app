@@ -13,8 +13,8 @@ const TitleComponent: React.FC<TitleComponentProps> = (props) => {
   const styles: React.CSSProperties = React.useMemo(() => ({
     ...style,
     fontWeight: style?.fontWeight ?? 500,
-    fontSize: style?.fontSize ?? "24px   ",
-    color: ColorEnum.WHITE,
+    fontSize: style?.fontSize ?? "24px",
+    color: style?.color ?? ColorEnum.WHITE,
   }), [style]);
 
   return <CustomTitle style={styles}>{children}</CustomTitle>;
