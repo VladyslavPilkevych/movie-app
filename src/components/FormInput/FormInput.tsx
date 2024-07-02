@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { TextField, TextFieldProps } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { useFormContext } from '../../context/FormContext';
@@ -11,7 +11,7 @@ interface InputProps {
   textInputPropsMUI?: TextFieldProps;
 }
 
-const FormInput: FC<InputProps> = ({ formFieldName, label, type = 'text', textInputPropsMUI }) => {
+const FormInput: React.FC<InputProps> = ({ formFieldName, label, type = 'text', textInputPropsMUI }) => {
   const { stateKey } = useFormContext();
   const dispatch = useDispatch();
   const value = useSelector((state: any) => state.form[stateKey]?.[formFieldName] || '');

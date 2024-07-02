@@ -32,7 +32,7 @@ export const CustomFormSection = styled.div`
 export const formInputsSX = {
   '& .MuiOutlinedInput-root': {
     '& fieldset': {
-      borderColor: ColorEnum.WHITE,
+      borderColor: "rgba(256, 256, 256, 0.6)",
     },
     '&:hover fieldset': {
       borderColor: ColorEnum.WHITE,
@@ -44,7 +44,7 @@ export const formInputsSX = {
     },
   },
   '& .MuiInputLabel-outlined': {
-    color: ColorEnum.WHITE,
+    color: "rgba(256, 256, 256, 0.6)",
     '&.Mui-focused': {
       color: ColorEnum.WHITE,
       backgroundColor: ColorEnum.BACKGROUNG,

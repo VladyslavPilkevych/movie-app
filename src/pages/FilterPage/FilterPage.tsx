@@ -1,11 +1,39 @@
 import React from 'react';
 import TitleComponent from '../../components/TitleComponent';
-import { CustomFilterPageContainer, FilterMenuSection, FilteredItemsSection } from './FilterPage.style';
+import {
+  CustomChipsBox,
+  CustomFilterPageContainer,
+  CustomFormControl,
+  FilterMenuSection,
+  FilteredItemsSection,
+  Search,
+  SearchIconWrapper,
+  StyledInputBase,
+} from './FilterPage.style';
 import { BASE_URL_IMG, IMovieApiData, api } from '../../api';
 import { IBaseCardData } from '../../types/types';
 import { convertMovieToCardItemProps } from '../../utils/funstions';
 import { Settings } from 'react-slick';
 import SliderComponent from '../../components/SliderComponent';
+import SearchIcon from '@mui/icons-material/Search';
+import {
+  Box,
+  Checkbox,
+  Chip,
+  InputLabel,
+  ListItemText,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+} from '@mui/material';
+
+type Category = 'movie' | 'tvSeries' | 'tvShow';
+
+const categories: { label: string; value: Category }[] = [
+  { label: 'Movie', value: 'movie' },
+  { label: 'TV Series', value: 'tvSeries' },
+  { label: 'TV Show', value: 'tvShow' },
+];
 
 const FilterPage: React.FC = () => {
   const [filteredArray, setFilteredArray] = React.useState<IBaseCardData[]>([]);
@@ -53,14 +81,73 @@ const FilterPage: React.FC = () => {
     [filteredArray]
   );
 
+  const [selectedCategories, setSelectedCategories] = React.useState<
+    Category[]
+  >([]);
+
+  const handleSelectChange = (event: SelectChangeEvent<Category[]>) => {
+    const value = event.target.value as Category[];
+    setSelectedCategories(value);
+  };
+
+  const handleDelete = (categoryToDelete: Category) => () => {
+    setSelectedCategories((categories) =>
+      categories.filter((category) => category !== categoryToDelete)
+    );
+  };
   return (
     <>
       <CustomFilterPageContainer>
-        <TitleComponent style={{ fontSize: '36px' }}>
-          {'Filter'}
-        </TitleComponent>
+        <TitleComponent style={{ fontSize: '36px' }}>{'Filter'}</TitleComponent>
         <FilterMenuSection>
-          
+          <Box sx={{ width: 300 }}>
+            <CustomFormControl fullWidth>
+              <InputLabel id="category-select-label" shrink={false}>
+                {'Categories'}
+              </InputLabel>
+              <Select
+                labelId="category-select-label"
+                multiple={true}
+                value={selectedCategories}
+                onChange={handleSelectChange}
+                renderValue={() => <></>}
+              >
+                {categories.map((category) => (
+                  <MenuItem key={category.value} value={category.value}>
+                    <Checkbox
+                      checked={selectedCategories.indexOf(category.value) > -1}
+                    />
+                    <ListItemText primary={category.label} />
+                  </MenuItem>
+                ))}
+              </Select>
+              <CustomChipsBox>
+                {selectedCategories.map((value) => (
+                  <Chip
+                    key={value}
+                    label={categories.find((cat) => cat.value === value)?.label}
+                    onDelete={handleDelete(value)}
+                    sx={{
+                      border: '1px solid rgba(255, 255, 255, 0.8)',
+                      color: 'rgba(255, 255, 255, 0.8)',
+                      '& .MuiChip-deleteIcon': {
+                        color: 'rgba(255, 255, 255, 0.8)',
+                      },
+                    }}
+                  />
+                ))}
+              </CustomChipsBox>
+            </CustomFormControl>
+          </Box>
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search>
         </FilterMenuSection>
         <FilteredItemsSection>
           {filteredArray && (
