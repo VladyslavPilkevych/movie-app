@@ -129,9 +129,18 @@ const FilterPage: React.FC = () => {
                     onDelete={handleDelete(value)}
                     sx={{
                       border: '1px solid rgba(255, 255, 255, 0.8)',
+                      '&:hover': {
+                        border: '1px solid rgba(256, 256, 256, 1)',
+                      },
                       color: 'rgba(255, 255, 255, 0.8)',
                       '& .MuiChip-deleteIcon': {
                         color: 'rgba(255, 255, 255, 0.8)',
+                        '&:hover': {
+                          color: 'rgba(256, 256, 256, 1)',
+                        },
+                        '&:active': {
+                          color: 'rgba(256, 256, 256, 0.4)',
+                        },
                       },
                     }}
                   />
