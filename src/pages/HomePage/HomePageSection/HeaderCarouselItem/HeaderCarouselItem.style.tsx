@@ -6,10 +6,10 @@ export const CustomContainer = styled.div`
   background-position: center;
   background-size: cover;
   height: 550px;
-  @media ${(props) => props.theme.media.tablet} {
+  @media ${(props) => props.theme.customTheme.media.tablet} {
     height: 350px;
   }
-  @media ${(props) => props.theme.media.phone} {
+  @media ${(props) => props.theme.customTheme.media.phone} {
     height: 150px;
   }
 `;
@@ -23,7 +23,7 @@ export const CustomDarkBg = styled.div`
     rgba(29, 29, 29, 0) 0.04%,
     rgba(29, 29, 29, 0.8) 99.5%
   );
-  @media ${(props) => props.theme.media.phone} {
+  @media ${(props) => props.theme.customTheme.media.phone} {
     padding: 5%;
   }
 `;
@@ -33,35 +33,35 @@ export const CustomMovieGenre = styled.div`
   padding: 5px;
   display: inline-block;
   font-family: 'Roboto', sans-serif;
-  color: ${(props) => props.theme.colors.lightBlue};
+  color: ${(props) => props.theme.customTheme.colors.lightBlue};
 `;
 export const CustomMovieName = styled.h2`
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.customTheme.colors.white};
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 56px;
   margin-top: 15px;
-  @media ${(props) => props.theme.media.tablet} {
+  @media ${(props) => props.theme.customTheme.media.tablet} {
     font-size: 36px;
     margin-top: 12px;
   }
-  @media ${(props) => props.theme.media.phone} {
+  @media ${(props) => props.theme.customTheme.media.phone} {
     font-size: 20px;
     margin-top: 10px;
   }
 `;
 export const CustomMovieText = styled.h5`
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.customTheme.colors.white};
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   max-width: 60%;
   font-size: 16px;
   margin-top: 20px;
-  @media ${(props) => props.theme.media.tablet} {
+  @media ${(props) => props.theme.customTheme.media.tablet} {
     font-size: 14px;
     margin-top: 15px;
   }
-  @media ${(props) => props.theme.media.phone} {
+  @media ${(props) => props.theme.customTheme.media.phone} {
     max-width: 80%;
     font-size: 14px;
     white-space: nowrap;
@@ -91,7 +91,7 @@ export const CustomBtnGradient = styled.div`
 `;
 
 export const CustomWatchNowBtn = styled.button`
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.customTheme.colors.white};
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   padding: 15px 35px;
@@ -107,10 +107,10 @@ export const CustomWatchNowBtn = styled.button`
     transform: scale(1.1);
     font-weight: bold;
   }
-  @media ${(props) => props.theme.media.tablet} {
+  @media ${(props) => props.theme.customTheme.media.tablet} {
     font-size: 18px;
   }
-  @media ${(props) => props.theme.media.phone} {
+  @media ${(props) => props.theme.customTheme.media.phone} {
     font-size: 16px;
   }
 `;

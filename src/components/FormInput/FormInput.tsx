@@ -1,8 +1,9 @@
 import React from 'react';
-import { TextField, TextFieldProps } from '@mui/material';
+import { TextFieldProps } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { useFormContext } from '../../context/FormContext';
 import { ActionTypesEnum } from '../../redux/types';
+import { CustomTextField } from './FormInput.style';
 
 interface InputProps {
   formFieldName: string;
@@ -21,7 +22,7 @@ const FormInput: React.FC<InputProps> = ({ formFieldName, label, type = 'text', 
   };
 
   return (
-    <TextField
+    <CustomTextField
       label={label}
       type={type}
       value={value}
@@ -31,4 +32,4 @@ const FormInput: React.FC<InputProps> = ({ formFieldName, label, type = 'text', 
   );
 };
 
-export default FormInput;
+export default React.memo(FormInput);

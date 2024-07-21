@@ -8,11 +8,6 @@ import {
 import styled from 'styled-components';
 import { ColorEnum } from '../../assets/styles';
 
-export const CustomFilterPageContainer = styled.section`
-  padding: 20px 0 40px;
-  background-color: ${(props) => props.theme.colors.background};
-`;
-
 export const FilterMenuSection = styled.section`
   margin: 20px 10%;
   padding: 40px;

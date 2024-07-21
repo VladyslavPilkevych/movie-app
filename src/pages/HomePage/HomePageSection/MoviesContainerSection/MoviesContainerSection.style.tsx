@@ -12,13 +12,13 @@ import styled from "styled-components";
 
 export const CustomTitle = styled.h2`
   margin: 50px 25px 20px;
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.customTheme.colors.white};
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 18px;
-  // @media ${(props) => props.theme.media.tablet} {
+  // @media ${(props) => props.theme.customTheme.media.tablet} {
   // }
-  // @media ${(props) => props.theme.media.phone} {
+  // @media ${(props) => props.theme.customTheme.media.phone} {
   // }
 `;
 

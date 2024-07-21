@@ -2,7 +2,6 @@ import React from 'react';
 import TitleComponent from '../../components/TitleComponent';
 import {
   CustomChipsBox,
-  CustomFilterPageContainer,
   CustomFormControl,
   FilterMenuSection,
   FilteredItemsSection,
@@ -97,78 +96,76 @@ const FilterPage: React.FC = () => {
   };
   return (
     <>
-      <CustomFilterPageContainer>
-        <TitleComponent style={{ fontSize: '36px' }}>{'Filter'}</TitleComponent>
-        <FilterMenuSection>
-          <Box sx={{ width: 300 }}>
-            <CustomFormControl fullWidth>
-              <InputLabel id="category-select-label" shrink={false}>
-                {'Categories'}
-              </InputLabel>
-              <Select
-                labelId="category-select-label"
-                multiple={true}
-                value={selectedCategories}
-                onChange={handleSelectChange}
-                renderValue={() => <></>}
-              >
-                {categories.map((category) => (
-                  <MenuItem key={category.value} value={category.value}>
-                    <Checkbox
-                      checked={selectedCategories.indexOf(category.value) > -1}
-                    />
-                    <ListItemText primary={category.label} />
-                  </MenuItem>
-                ))}
-              </Select>
-              <CustomChipsBox>
-                {selectedCategories.map((value) => (
-                  <Chip
-                    key={value}
-                    label={categories.find((cat) => cat.value === value)?.label}
-                    onDelete={handleDelete(value)}
-                    sx={{
-                      border: '1px solid rgba(255, 255, 255, 0.8)',
-                      '&:hover': {
-                        border: '1px solid rgba(256, 256, 256, 1)',
-                      },
-                      color: 'rgba(255, 255, 255, 0.8)',
-                      '& .MuiChip-deleteIcon': {
-                        color: 'rgba(255, 255, 255, 0.8)',
-                        '&:hover': {
-                          color: 'rgba(256, 256, 256, 1)',
-                        },
-                        '&:active': {
-                          color: 'rgba(256, 256, 256, 0.4)',
-                        },
-                      },
-                    }}
+      <TitleComponent style={{ fontSize: '36px' }}>{'Filter'}</TitleComponent>
+      <FilterMenuSection>
+        <Box sx={{ width: 300 }}>
+          <CustomFormControl fullWidth>
+            <InputLabel id="category-select-label" shrink={false}>
+              {'Categories'}
+            </InputLabel>
+            <Select
+              labelId="category-select-label"
+              multiple={true}
+              value={selectedCategories}
+              onChange={handleSelectChange}
+              renderValue={() => <></>}
+            >
+              {categories.map((category) => (
+                <MenuItem key={category.value} value={category.value}>
+                  <Checkbox
+                    checked={selectedCategories.indexOf(category.value) > -1}
                   />
-                ))}
-              </CustomChipsBox>
-            </CustomFormControl>
-          </Box>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
+                  <ListItemText primary={category.label} />
+                </MenuItem>
+              ))}
+            </Select>
+            <CustomChipsBox>
+              {selectedCategories.map((value) => (
+                <Chip
+                  key={value}
+                  label={categories.find((cat) => cat.value === value)?.label}
+                  onDelete={handleDelete(value)}
+                  sx={{
+                    border: '1px solid rgba(255, 255, 255, 0.8)',
+                    '&:hover': {
+                      border: '1px solid rgba(256, 256, 256, 1)',
+                    },
+                    color: 'rgba(255, 255, 255, 0.8)',
+                    '& .MuiChip-deleteIcon': {
+                      color: 'rgba(255, 255, 255, 0.8)',
+                      '&:hover': {
+                        color: 'rgba(256, 256, 256, 1)',
+                      },
+                      '&:active': {
+                        color: 'rgba(256, 256, 256, 0.4)',
+                      },
+                    },
+                  }}
+                />
+              ))}
+            </CustomChipsBox>
+          </CustomFormControl>
+        </Box>
+        <Search>
+          <SearchIconWrapper>
+            <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase
+            placeholder="Search…"
+            inputProps={{ 'aria-label': 'search' }}
+          />
+        </Search>
+      </FilterMenuSection>
+      <FilteredItemsSection>
+        {filteredArray && (
+          <>
+            <SliderComponent
+              sliderItemsArray={filteredArray}
+              sliderSettings={sliderSettings}
             />
-          </Search>
-        </FilterMenuSection>
-        <FilteredItemsSection>
-          {filteredArray && (
-            <>
-              <SliderComponent
-                sliderItemsArray={filteredArray}
-                sliderSettings={sliderSettings}
-              />
-            </>
-          )}
-        </FilteredItemsSection>
-      </CustomFilterPageContainer>
+          </>
+        )}
+      </FilteredItemsSection>
     </>
   );
 };

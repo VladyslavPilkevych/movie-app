@@ -11,7 +11,7 @@ export const CustomDivMoreInfo = styled.div`
 
   opacity: 0;
   transition: 0.5s;
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.customTheme.colors.white};
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -45,10 +45,10 @@ export const CustomContainer = styled.div`
     transform: scale(1.1);
   }
   // background-position: center;
-  // @media ${(props) => props.theme.media.tablet} {
+  // @media ${(props) => props.theme.customTheme.media.tablet} {
   //   height: 350px;
   // }
-  // @media ${(props) => props.theme.media.phone} {
+  // @media ${(props) => props.theme.customTheme.media.phone} {
   //   height: 150px;
   // }
   &:hover ${CustomDivMoreInfo} {
@@ -70,7 +70,7 @@ export const CustomMovieGenre = styled.div`
   padding: 5px;
   display: inline-block;
   font-family: 'Roboto', sans-serif;
-  color: ${(props) => props.theme.colors.lightBlue};
+  color: ${(props) => props.theme.customTheme.colors.lightBlue};
 `;
 export const CustomIcon = styled.button`
   background: transparent;
@@ -82,14 +82,14 @@ export const CustomIcon = styled.button`
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.customTheme.colors.white};
   :hover {
     background-color: hsla(0, 50%, 0%, 0.3);
     scale: 1.2;
   }
 `;
 export const CustomMovieName = styled.h2`
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.customTheme.colors.white};
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 30px;
@@ -99,11 +99,11 @@ export const CustomMovieName = styled.h2`
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  @media ${(props) => props.theme.media.tablet} {
+  @media ${(props) => props.theme.customTheme.media.tablet} {
     font-size: 26px;
     margin-top: 12px;
   }
-  @media ${(props) => props.theme.media.phone} {
+  @media ${(props) => props.theme.customTheme.media.phone} {
     font-size: 22px;
     margin-top: 10px;
   }

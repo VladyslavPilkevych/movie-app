@@ -7,7 +7,7 @@ export const PageHeader = styled.header`
   width: 5%;
   position: fixed;
   z-index: 10;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${(props) => props.theme.customTheme.colors.background};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,7 +66,7 @@ export const CustomNavLink = styled(NavLink)`
     animation: bounce 1s;
   }
   :hover button svg {
-    color: ${(props) => props.theme.colors.orange};
+    color: ${(props) => props.theme.customTheme.colors.orange};
     transition: 1s;
   }
   &.active {
@@ -74,7 +74,7 @@ export const CustomNavLink = styled(NavLink)`
     opacity: 0.4;
     animation: none;
     :hover button svg {
-      color: ${(props) => props.theme.colors.white};
+      color: ${(props) => props.theme.customTheme.colors.white};
     }
   }
 `;

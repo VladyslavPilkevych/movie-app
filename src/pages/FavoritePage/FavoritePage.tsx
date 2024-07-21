@@ -1,5 +1,4 @@
 import React from 'react';
-import { CustomDarkBg, CustomFavoriteContainer } from './FavoritePage.style';
 import { IBaseCardData } from '../../types/types';
 import { BASE_URL_IMG, IMovieApiData, api } from '../../api';
 import { convertMovieToCardItemProps } from '../../utils/funstions';
@@ -52,6 +51,10 @@ const FavoritePage: React.FC = () => {
         : {},
     [favoriteArray]
   );
+  
+  React.useEffect(() => {
+    console.log(favoriteArray[0])
+  }, [favoriteArray]);
 
   React.useEffect(() => {
     console.log(sliderSettings)
@@ -59,8 +62,6 @@ const FavoritePage: React.FC = () => {
 
   return (
     <>
-      <CustomDarkBg />
-      <CustomFavoriteContainer>
         <TitleComponent style={{fontSize: "36px"}}>{`Favorite: ${favoriteArray?.length ?? 0}`}</TitleComponent>
         {favoriteArray && (
           <>
@@ -70,7 +71,6 @@ const FavoritePage: React.FC = () => {
             />
           </>
         )}
-      </CustomFavoriteContainer>
     </>
   );
 };

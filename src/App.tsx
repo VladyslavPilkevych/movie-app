@@ -3,14 +3,33 @@ import AppRoutes from './Routes/Routes';
 import Header from './components/Header';
 import './App.css'
 import Footer from './components/Footer';
+import styled from 'styled-components';
+
+export const CustomDarkBgContainer = styled.section`
+  padding: 20px 0 40px 5%;
+  padding-bottom: 40px;
+  background-color: ${(props) => props.theme.customTheme.colors.background};
+`;
+
+export const CustomDarkBg = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0px;
+  bottom: 0;
+  z-index: 1;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 1);
+  box-shadow: 0px 0 50px 40px rgba(0, 0, 0, 1);
+`;
 
 function App() {
   return (
     <div>
       <Header />
-      <div style={{ paddingLeft: '5%' }}>
+      <CustomDarkBg />
+      <CustomDarkBgContainer>
         <AppRoutes />
-      </div>
+      </CustomDarkBgContainer>
       <Footer />
     </div>
   );

@@ -1,6 +1,16 @@
+import { createTheme } from '@mui/material/styles';
 import { ITheme } from '../../types/types';
 
-export const theme: ITheme = {
+declare module '@mui/material/styles' {
+  interface Theme {
+    customTheme: ITheme;
+  }
+  interface ThemeOptions {
+    customTheme?: ITheme;
+  }
+}
+
+export const customTheme: ITheme = {
   colors: {
     white: '#ffffff',
     black: '#000000',
@@ -16,3 +26,15 @@ export const theme: ITheme = {
     notLaptop: '(max-width: 768px)',
   },
 };
+
+export const theme = createTheme({
+  palette: {
+    primary: {
+      main: customTheme.colors.lightBlue,
+    },
+    secondary: {
+      main: customTheme.colors.orange,
+    },
+  },
+  customTheme,
+});
