@@ -4,9 +4,11 @@ import { ITheme } from '../../types/types';
 declare module '@mui/material/styles' {
   interface Theme {
     customTheme: ITheme;
+    active: boolean;
   }
   interface ThemeOptions {
     customTheme?: ITheme;
+    active?: boolean;
   }
 }
 
@@ -37,4 +39,5 @@ export const theme = createTheme({
     },
   },
   customTheme,
+  active: false,
 });
