@@ -8,6 +8,10 @@ import {
   Search,
   SearchIconWrapper,
   StyledInputBase,
+  DarkSelect,
+  DarkMenuItem,
+  OrangeCheckbox,
+  StyledChip
 } from './FilterPage.style';
 import { BASE_URL_IMG, IMovieApiData, api } from '../../api';
 import { IBaseCardData } from '../../types/types';
@@ -17,12 +21,8 @@ import SliderComponent from '../../components/SliderComponent';
 import SearchIcon from '@mui/icons-material/Search';
 import {
   Box,
-  Checkbox,
-  Chip,
   InputLabel,
   ListItemText,
-  MenuItem,
-  Select,
   SelectChangeEvent,
 } from '@mui/material';
 
@@ -68,7 +68,7 @@ const FilterPage: React.FC = () => {
       }
     };
     fetchMovies();
-  }, []); // todo: remove
+  }, []);
 
   const sliderSettings: Settings = React.useMemo(
     () =>
@@ -84,7 +84,7 @@ const FilterPage: React.FC = () => {
     Category[]
   >([]);
 
-  const handleSelectChange = (event: SelectChangeEvent<Category[]>) => {
+  const handleSelectChange = (event: SelectChangeEvent<unknown>) => {
     const value = event.target.value as Category[];
     setSelectedCategories(value);
   };
@@ -94,6 +94,7 @@ const FilterPage: React.FC = () => {
       categories.filter((category) => category !== categoryToDelete)
     );
   };
+
   return (
     <>
       <TitleComponent style={{ fontSize: '36px' }}>{'Filter'}</TitleComponent>
@@ -103,7 +104,7 @@ const FilterPage: React.FC = () => {
             <InputLabel id="category-select-label" shrink={false}>
               {'Categories'}
             </InputLabel>
-            <Select
+            <DarkSelect
               labelId="category-select-label"
               multiple={true}
               value={selectedCategories}
@@ -111,36 +112,20 @@ const FilterPage: React.FC = () => {
               renderValue={() => <></>}
             >
               {categories.map((category) => (
-                <MenuItem key={category.value} value={category.value}>
-                  <Checkbox
+                <DarkMenuItem key={category.value} value={category.value}>
+                  <OrangeCheckbox
                     checked={selectedCategories.indexOf(category.value) > -1}
                   />
                   <ListItemText primary={category.label} />
-                </MenuItem>
+                </DarkMenuItem>
               ))}
-            </Select>
+            </DarkSelect>
             <CustomChipsBox>
               {selectedCategories.map((value) => (
-                <Chip
+                <StyledChip
                   key={value}
                   label={categories.find((cat) => cat.value === value)?.label}
                   onDelete={handleDelete(value)}
-                  sx={{
-                    border: '1px solid rgba(255, 255, 255, 0.8)',
-                    '&:hover': {
-                      border: '1px solid rgba(256, 256, 256, 1)',
-                    },
-                    color: 'rgba(255, 255, 255, 0.8)',
-                    '& .MuiChip-deleteIcon': {
-                      color: 'rgba(255, 255, 255, 0.8)',
-                      '&:hover': {
-                        color: 'rgba(256, 256, 256, 1)',
-                      },
-                      '&:active': {
-                        color: 'rgba(256, 256, 256, 0.4)',
-                      },
-                    },
-                  }}
                 />
               ))}
             </CustomChipsBox>

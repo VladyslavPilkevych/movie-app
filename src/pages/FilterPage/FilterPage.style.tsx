@@ -4,6 +4,10 @@ import {
   InputBase,
   alpha,
   styled as styledMUI,
+  Select as MUISelect,
+  MenuItem as MUIMenuItem,
+  Checkbox,
+  Chip
 } from '@mui/material';
 import styled from 'styled-components';
 import { ColorEnum } from '../../assets/styles';
@@ -99,4 +103,62 @@ export const StyledInputBase = styledMUI(InputBase)(({ theme }) => ({
 
 export const FilteredItemsSection = styled.section`
   margin: 50px;
+`;
+
+export const DarkSelect = styledMUI(MUISelect)(({ theme }) => ({
+  color: theme?.customTheme?.colors?.white,
+  '.MuiOutlinedInput-notchedOutline': {
+    borderColor: theme?.customTheme?.colors?.background,
+  },
+  '&:hover .MuiOutlinedInput-notchedOutline': {
+    borderColor: theme?.customTheme?.colors?.background,
+  },
+  '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+    borderColor: theme?.customTheme?.colors?.background,
+  },
+  '.MuiSelect-select:focus': {
+    backgroundColor: 'transparent',
+  },
+}));
+
+export const DarkMenuItem = styledMUI(MUIMenuItem)(({ theme }) => ({
+  backgroundColor: theme?.customTheme?.colors?.background,
+  color: theme?.customTheme?.colors?.white,
+  '&:hover': {
+    backgroundColor: theme?.customTheme?.colors?.backgroundLight,
+  },
+  '&.Mui-selected': {
+    color: theme?.customTheme?.colors?.orange,
+    backgroundColor: theme?.customTheme?.colors?.backgroundLight,
+    '&:hover': {
+      backgroundColor: theme?.customTheme?.colors?.hoverDarkBlue,
+    },
+  },
+  '&.Mui-focusVisible': {
+    backgroundColor: theme?.customTheme?.colors?.backgroundLight,
+  },
+}));
+
+export const OrangeCheckbox = styledMUI(Checkbox)(({ theme }) => ({
+  color: theme?.customTheme?.colors?.white,
+  '&.Mui-checked': {
+    color: theme?.customTheme?.colors?.orange,
+  },
+}));
+
+export const StyledChip = styled(Chip)`
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  &:hover {
+    border: 1px solid rgba(256, 256, 256, 1);
+  }
+  color: rgba(255, 255, 255, 0.8);
+  & .MuiChip-deleteIcon {
+    color: rgba(255, 255, 255, 0.8);
+    &:hover {
+      color: rgba(256, 256, 256, 1);
+    }
+    &:active {
+      color: rgba(256, 256, 256, 0.4);
+    }
+  }
 `;

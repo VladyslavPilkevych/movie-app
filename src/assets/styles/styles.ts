@@ -17,6 +17,7 @@ export const customTheme: ITheme = {
     white: '#ffffff',
     black: '#000000',
     background: '#1D1D1D',
+    backgroundLight: '#333333',
     creamWhite: '#EDF5E1',
     lightBlue: '#0FEFFD',
     hoverDarkBlue: '#01203f',

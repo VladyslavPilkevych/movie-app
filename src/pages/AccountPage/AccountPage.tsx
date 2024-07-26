@@ -59,99 +59,104 @@ const AccountPage: React.FC = () => {
         setToggleToast={setToggleErrorToast}
         alertSeverity={AlertColor.WARNING}
       />
-      <Form stateKey="myForm" onSubmit={handleSubmit}>
-        <TitleComponent style={{ fontSize: '36px' }}>
-          {'Account settings:'}
-        </TitleComponent>
-        <CustomFormSection>
-          <FormInput
-            formFieldName="name"
-            label="Your Name"
-            textInputPropsMUI={{
-              variant: 'outlined',
-              fullWidth: true,
-            }}
-          />
-          <FormInput
-            formFieldName="email"
-            label="Your email"
-            textInputPropsMUI={{
-              variant: 'outlined',
-              fullWidth: true,
-            }}
-          />
-          <FormInput
-            formFieldName="avatar"
-            label="Upload an avatar"
-            textInputPropsMUI={{
-              variant: 'outlined',
-              fullWidth: true,
-            }}
-          />
-        </CustomFormSection>
-        <TitleComponent style={{ fontSize: '32px' }}>
-          {'Security:'}
-        </TitleComponent>
+      <div
+        style={{
+          padding: '40px 0',
+        }}
+      >
+        <Form stateKey="myForm" onSubmit={handleSubmit}>
+          <TitleComponent style={{ fontSize: '36px' }}>
+            {'Account settings:'}
+          </TitleComponent>
+          <CustomFormSection>
+            <FormInput
+              formFieldName="name"
+              label="Your Name"
+              textInputPropsMUI={{
+                variant: 'outlined',
+                fullWidth: true,
+              }}
+            />
+            <FormInput
+              formFieldName="email"
+              label="Your email"
+              textInputPropsMUI={{
+                variant: 'outlined',
+                fullWidth: true,
+              }}
+            />
+            <FormInput
+              formFieldName="avatar"
+              label="Upload an avatar"
+              textInputPropsMUI={{
+                variant: 'outlined',
+                fullWidth: true,
+              }}
+            />
+          </CustomFormSection>
+          <TitleComponent style={{ fontSize: '32px' }}>
+            {'Security:'}
+          </TitleComponent>
 
-        <CustomFormPasswordSection>
-          <FormInput
-            formFieldName="oldPassword"
-            label="Old Password"
-            textInputPropsMUI={{
-              variant: 'outlined',
-              fullWidth: true,
-              type: toggleOldPassword ? 'text' : 'password',
-              InputProps: {
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowOldPassword}
-                      onMouseDown={handleMouseDownPassword}
-                    >
-                      {toggleOldPassword ? (
-                        <VisibilityOff sx={{ color: ColorEnum.WHITE }} />
-                      ) : (
-                        <Visibility sx={{ color: ColorEnum.WHITE }} />
-                      )}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              },
-            }}
-          />
-          <FormInput
-            formFieldName="newPassword"
-            label="New Password"
-            textInputPropsMUI={{
-              variant: 'outlined',
-              fullWidth: true,
-              type: toggleNewPassword ? 'text' : 'password',
-              InputProps: {
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowNewPassword}
-                      onMouseDown={handleMouseDownPassword}
-                    >
-                      {toggleNewPassword ? (
-                        <VisibilityOff sx={{ color: ColorEnum.WHITE }} />
-                      ) : (
-                        <Visibility sx={{ color: ColorEnum.WHITE }} />
-                      )}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              },
-            }}
-          />
-        </CustomFormPasswordSection>
-        <CustomButtonContainer>
-          <CustomButton type="submit" variant="outlined" size="large">
-            {'Save'}
-          </CustomButton>
-          {/* <CustomButton
+          <CustomFormPasswordSection>
+            <FormInput
+              formFieldName="oldPassword"
+              label="Old Password"
+              textInputPropsMUI={{
+                variant: 'outlined',
+                fullWidth: true,
+                type: toggleOldPassword ? 'text' : 'password',
+                InputProps: {
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowOldPassword}
+                        onMouseDown={handleMouseDownPassword}
+                      >
+                        {toggleOldPassword ? (
+                          <VisibilityOff sx={{ color: ColorEnum.WHITE }} />
+                        ) : (
+                          <Visibility sx={{ color: ColorEnum.WHITE }} />
+                        )}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                },
+              }}
+            />
+            <FormInput
+              formFieldName="newPassword"
+              label="New Password"
+              textInputPropsMUI={{
+                variant: 'outlined',
+                fullWidth: true,
+                type: toggleNewPassword ? 'text' : 'password',
+                InputProps: {
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowNewPassword}
+                        onMouseDown={handleMouseDownPassword}
+                      >
+                        {toggleNewPassword ? (
+                          <VisibilityOff sx={{ color: ColorEnum.WHITE }} />
+                        ) : (
+                          <Visibility sx={{ color: ColorEnum.WHITE }} />
+                        )}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                },
+              }}
+            />
+          </CustomFormPasswordSection>
+          <CustomButtonContainer>
+            <CustomButton type="submit" variant="outlined" size="large">
+              {'Save'}
+            </CustomButton>
+            {/* <CustomButton
               type="button"
               onClick={handleCancel}
               variant="outlined"
@@ -159,8 +164,9 @@ const AccountPage: React.FC = () => {
             >
               {'Cancel'}
             </CustomButton> */}
-        </CustomButtonContainer>
-      </Form>
+          </CustomButtonContainer>
+        </Form>
+      </div>
     </>
   );
 };

@@ -6,6 +6,7 @@ export interface ITheme {
     white: string;
     black: string;
     background: string;
+    backgroundLight: string;
     creamWhite: string;
     lightBlue: string;
     hoverDarkBlue: string;
@@ -36,4 +37,6 @@ export interface IBaseCardData {
   voteCount?: number;
   adult?: boolean;
   releaseDate?: LocalDate;
+  description?: string;
+  bgImgPath?: string;
 }

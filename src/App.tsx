@@ -6,8 +6,8 @@ import Footer from './components/Footer';
 import styled from 'styled-components';
 
 export const CustomDarkBgContainer = styled.section`
-  padding: 20px 0 40px 5%;
-  padding-bottom: 40px;
+  // padding: 20px 0 40px 5%;
+  padding: 0 0 0   5%;
   background-color: ${(props) => props.theme.customTheme.colors.background};
 `;
 
