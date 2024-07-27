@@ -4,6 +4,7 @@ import Header from './components/Header';
 import './App.css'
 import Footer from './components/Footer';
 import styled from 'styled-components';
+import axios from 'axios';
 
 export const CustomDarkBgContainer = styled.section`
   // padding: 20px 0 40px 5%;
@@ -23,6 +24,23 @@ export const CustomDarkBg = styled.div`
 `;
 
 function App() {
+
+  React.useEffect(() => {
+    axios.get('/api/hello')
+        .then(response => {
+            console.log(response.data);
+        })
+        .catch(error => {
+            console.error('There was an error!', error);
+        });
+}, []);
+
+//   React.useEffect(() => {
+//     axios.get('/hello')
+//         .then(response => {
+//             console.log(response.data);
+//         });
+// }, []);
   return (
     <div>
       <Header />

@@ -31,11 +31,11 @@ const MoviesContainerSection: React.FC = () => {
               img.src = `${BASE_URL_IMG}original${movie?.poster_path}`;
 
               img.onload = function () {
-                console.log('Image loaded successfully');
+                // console.log('Image loaded successfully');
                 resolve(movie);
               };
               img.onerror = function () {
-                console.log('Image failed to load');
+                // console.log('Image failed to load');
                 resolve(null);
               };
             });
@@ -61,11 +61,11 @@ const MoviesContainerSection: React.FC = () => {
               img.src = `${BASE_URL_IMG}original${movie?.poster_path}`;
 
               img.onload = function () {
-                console.log('Image loaded successfully');
+                // console.log('Image loaded successfully');
                 resolve(movie);
               };
               img.onerror = function () {
-                console.log('Image failed to load');
+                // console.log('Image failed to load');
                 resolve(null);
               };
             });
@@ -92,11 +92,11 @@ const MoviesContainerSection: React.FC = () => {
               img.src = `${BASE_URL_IMG}original${movie?.poster_path}`;
 
               img.onload = function () {
-                console.log('Image loaded successfully');
+                // console.log('Image loaded successfully');
                 resolve(movie);
               };
               img.onerror = function () {
-                console.log('Image failed to load');
+                // console.log('Image failed to load');
                 resolve(null);
               };
             });
