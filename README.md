@@ -1,5 +1,8 @@
 <h1 align='center'>Movie App (still in progress)</h1>
 <hr>
+<h2>Back-end link:</h2>
+<a href="https://github.com/VladyslavPilkevych/movie-app-be">Link to BE</a>
+<hr>
 <h2>Technologies stack:</h2>
 <ol>
     <li>
@@ -8,20 +11,8 @@
             <li>React</li>
             <li>TypeScript</li>
             <li>Redux-thunk</li>
-            <li>MUI</li>
+            <li>MUI (Material-UI)</li>
             <li>Styled-Component</li>
-        </ul>
-    </li>
-    <li>
-        <h3>Backend:</h3>
-        <ul>
-            <li>Java Spring Boot</li>
-        </ul>
-    </li>
-    <li>
-        <h3>Database:</h3>
-        <ul>
-            <li>sqlite</li>
         </ul>
     </li>
 </ol>
