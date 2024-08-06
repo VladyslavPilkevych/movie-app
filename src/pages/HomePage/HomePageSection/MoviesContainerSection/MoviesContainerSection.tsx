@@ -31,11 +31,11 @@ const MoviesContainerSection: React.FC = () => {
               img.src = `${BASE_URL_IMG}original${movie?.poster_path}`;
 
               img.onload = function () {
-                console.log('Image loaded successfully');
+                // console.log('Image loaded successfully');
                 resolve(movie);
               };
               img.onerror = function () {
-                console.log('Image failed to load');
+                // console.log('Image failed to load');
                 resolve(null);
               };
             });
@@ -61,11 +61,11 @@ const MoviesContainerSection: React.FC = () => {
               img.src = `${BASE_URL_IMG}original${movie?.poster_path}`;
 
               img.onload = function () {
-                console.log('Image loaded successfully');
+                // console.log('Image loaded successfully');
                 resolve(movie);
               };
               img.onerror = function () {
-                console.log('Image failed to load');
+                // console.log('Image failed to load');
                 resolve(null);
               };
             });
@@ -78,8 +78,8 @@ const MoviesContainerSection: React.FC = () => {
       } catch (error) {
         console.error('Error fetching series: ', error);
       }
-    };
-    fetchSeries();
+    }; // todo: change mocks to my BE data
+    fetchSeries(); // todo: remove
 
     const fetchPopularMovies = async () => {
       try {
@@ -92,11 +92,11 @@ const MoviesContainerSection: React.FC = () => {
               img.src = `${BASE_URL_IMG}original${movie?.poster_path}`;
 
               img.onload = function () {
-                console.log('Image loaded successfully');
+                // console.log('Image loaded successfully');
                 resolve(movie);
               };
               img.onerror = function () {
-                console.log('Image failed to load');
+                // console.log('Image failed to load');
                 resolve(null);
               };
             });
@@ -111,7 +111,7 @@ const MoviesContainerSection: React.FC = () => {
       }
     };
     fetchPopularMovies();
-  }, []);
+  }, []); // todo: change mocks to my BE data
 
   return (
     <>

@@ -33,7 +33,7 @@ const MoviePage: React.FC<IMoviePageProps> = (props) => {
       'https://image.tmdb.org/t/p/original/vAvLQOyFoire5x8AmRNfvgkvrMZ.jpg',
     voteAverage: 0,
     voteCount: 0,
-  };
+  }; // todo: remove
   return (
     <>
       <BackgroundImage bgImgPath={movie.bgImgPath ?? ""}>
