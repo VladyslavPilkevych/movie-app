@@ -31,10 +31,10 @@
 <hr>
 <ul>
     <h3>Here are the key technologies used in the project:</h3>
-    <li><strong>React:<strong> Used as the main library for building the user interface, ensuring a responsive and dynamic user experience.</li>
-    <li><strong>TypeScript:<strong> Provides type safety and enhances code quality, making the development process more robust and maintainable.</li>
-    <li><strong>Redux-thunk:<strong> Manages application state and handles asynchronous operations efficiently, ensuring smooth data flow and state management.</li>
-    <li><strong>MUI (Material-UI):<strong> Implements a consistent and visually appealing design system with ready-to-use components, enhancing the application's UI.</li>
-    <li><strong>Styled-Components:<strong> Enables writing component-level styles using JavaScript, allowing for dynamic styling and theming.</li>
+    <li><strong>React:</strong> Used as the main library for building the user interface, ensuring a responsive and dynamic user experience.</li>
+    <li><strong>TypeScript:</strong> Provides type safety and enhances code quality, making the development process more robust and maintainable.</li>
+    <li><strong>Redux-thunk:</strong> Manages application state and handles asynchronous operations efficiently, ensuring smooth data flow and state management.</li>
+    <li><strong>MUI (Material-UI):</strong> Implements a consistent and visually appealing design system with ready-to-use components, enhancing the application's UI.</li>
+    <li><strong>Styled-Components:</strong> Enables writing component-level styles using JavaScript, allowing for dynamic styling and theming.</li>
     <li>For the backend, the project utilizes Java Spring Boot to create a scalable and secure server-side application, and SQLite for the database to store and retrieve movie-related data efficiently.</li>
 </ul>
