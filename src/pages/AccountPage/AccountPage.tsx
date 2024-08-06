@@ -15,7 +15,7 @@ import Toast from '../../components/Toast';
 import { AlertColor } from '../../components/Toast/types';
 
 const AccountPage: React.FC = () => {
-  const { formValues, setFormValue, clearFormValues } = useForm('myForm');
+  const { formValues, setFormValue, clearFormValues } = useForm('myForm'); // todo: remove (dont use)
   const [toggleSuccessToast, setToggleSuccessToast] =
     React.useState<boolean>(false);
   const [toggleErrorToast, setToggleErrorToast] =
@@ -41,10 +41,6 @@ const AccountPage: React.FC = () => {
   ) => {
     event.preventDefault();
   };
-
-  // const handleCancel = () => {
-  //   console.log('Form cancelled');
-  // };
 
   return (
     <>
@@ -156,7 +152,7 @@ const AccountPage: React.FC = () => {
             <CustomButton type="submit" variant="outlined" size="large">
               {'Save'}
             </CustomButton>
-            {/* <CustomButton
+            {/* <CustomButton // todo: remove
               type="button"
               onClick={handleCancel}
               variant="outlined"

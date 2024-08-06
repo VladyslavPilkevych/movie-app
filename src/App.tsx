@@ -1,14 +1,14 @@
 import React from 'react';
 import AppRoutes from './Routes/Routes';
 import Header from './components/Header';
-import './App.css'
+import './App.css';
 import Footer from './components/Footer';
 import styled from 'styled-components';
 import axios from 'axios';
 
 export const CustomDarkBgContainer = styled.section`
   // padding: 20px 0 40px 5%;
-  padding: 0 0 0   5%;
+  padding: 0 0 0 5%;
   background-color: ${(props) => props.theme.customTheme.colors.background};
 `;
 
@@ -24,23 +24,26 @@ export const CustomDarkBg = styled.div`
 `;
 
 function App() {
+  // React.useEffect(() => {
+  //   // axios.get(`/api/movie?id=${movieId}`)
+  //   axios
+  //     .get('/api/movie?id=3')
+  //     .then((response) => {
+  //       console.log(response);
+  //     })
+  //     .catch((error) => {
+  //       console.error('There was an error!', error);
+  //     });
+  //     axios
+  //     .get('/api/movies')
+  //     .then((response) => {
+  //       console.log(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error('There was an error!', error);
+  //     });
+  // }, []); // todo: remove
 
-  React.useEffect(() => {
-    axios.get('/api/hello')
-        .then(response => {
-            console.log(response.data);
-        })
-        .catch(error => {
-            console.error('There was an error!', error);
-        });
-}, []);
-
-//   React.useEffect(() => {
-//     axios.get('/hello')
-//         .then(response => {
-//             console.log(response.data);
-//         });
-// }, []);
   return (
     <div>
       <Header />

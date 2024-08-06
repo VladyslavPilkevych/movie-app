@@ -1,46 +1,40 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h1 align='center'>Movie App (still in progress)</h1>
+<hr>
+<h2>Technologies stack:</h2>
+<ol>
+    <li>
+        <h3>Front-End:</h3>
+        <ul>
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>Redux-thunk</li>
+            <li>MUI</li>
+            <li>Styled-Component</li>
+        </ul>
+    </li>
+    <li>
+        <h3>Backend:</h3>
+        <ul>
+            <li>Java Spring Boot</li>
+        </ul>
+    </li>
+    <li>
+        <h3>Database:</h3>
+        <ul>
+            <li>sqlite</li>
+        </ul>
+    </li>
+</ol>
+<hr>
+<h2>Project Description</h2>
+<p>My project is a movie application developed using modern web technologies and architectural approaches. In this application, you can browse movie information, search films, and manage your favorites list.</p>
+<hr>
+<ul>
+    <h3>Here are the key technologies used in the project:</h3>
+    <li><strong>React:<strong> Used as the main library for building the user interface, ensuring a responsive and dynamic user experience.</li>
+    <li><strong>TypeScript:<strong> Provides type safety and enhances code quality, making the development process more robust and maintainable.</li>
+    <li><strong>Redux-thunk:<strong> Manages application state and handles asynchronous operations efficiently, ensuring smooth data flow and state management.</li>
+    <li><strong>MUI (Material-UI):<strong> Implements a consistent and visually appealing design system with ready-to-use components, enhancing the application's UI.</li>
+    <li><strong>Styled-Components:<strong> Enables writing component-level styles using JavaScript, allowing for dynamic styling and theming.</li>
+    <li>For the backend, the project utilizes Java Spring Boot to create a scalable and secure server-side application, and SQLite for the database to store and retrieve movie-related data efficiently.</li>
+</ul>

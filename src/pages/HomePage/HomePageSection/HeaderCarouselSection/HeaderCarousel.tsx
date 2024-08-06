@@ -25,7 +25,7 @@ const HeaderCarousel: React.FC = () => {
       text: "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
       imageSrc: imgSuperheroes,
     },
-  ]; // todo: remove
+  ]; // todo: change mocks to my BE data
   return (
     <Carousel
       duration={1500}

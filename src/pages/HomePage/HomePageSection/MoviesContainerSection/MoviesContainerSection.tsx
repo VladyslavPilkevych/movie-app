@@ -78,8 +78,8 @@ const MoviesContainerSection: React.FC = () => {
       } catch (error) {
         console.error('Error fetching series: ', error);
       }
-    };
-    fetchSeries();
+    }; // todo: change mocks to my BE data
+    fetchSeries(); // todo: remove
 
     const fetchPopularMovies = async () => {
       try {
@@ -111,7 +111,7 @@ const MoviesContainerSection: React.FC = () => {
       }
     };
     fetchPopularMovies();
-  }, []);
+  }, []); // todo: change mocks to my BE data
 
   return (
     <>

@@ -6,7 +6,6 @@ import {
   CustomTab,
   CustomTabs,
   Root,
-  SideContainer,
   FormContainer,
   FormInputContainer,
   TabContent,

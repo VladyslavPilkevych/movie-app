@@ -68,7 +68,7 @@ const FilterPage: React.FC = () => {
       }
     };
     fetchMovies();
-  }, []);
+  }, []); // todo: change mocks to my BE data
 
   const sliderSettings: Settings = React.useMemo(
     () =>
